@@ -1,0 +1,73 @@
+{
+  "name": "Game",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Short code to join the game"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "waiting",
+        "placing",
+        "playing",
+        "finished"
+      ],
+      "description": "Current game status"
+    },
+    "player1_email": {
+      "type": "string",
+      "description": "Player 1 email"
+    },
+    "player2_email": {
+      "type": "string",
+      "description": "Player 2 email"
+    },
+    "player1_board": {
+      "type": "string",
+      "description": "JSON string of player 1 board state"
+    },
+    "player2_board": {
+      "type": "string",
+      "description": "JSON string of player 2 board state"
+    },
+    "player1_ships": {
+      "type": "string",
+      "description": "JSON string of player 1 ship placements"
+    },
+    "player2_ships": {
+      "type": "string",
+      "description": "JSON string of player 2 ship placements"
+    },
+    "player1_attacks": {
+      "type": "string",
+      "description": "JSON string of player 1 attacks on player 2"
+    },
+    "player2_attacks": {
+      "type": "string",
+      "description": "JSON string of player 2 attacks on player 1"
+    },
+    "player1_ready": {
+      "type": "boolean",
+      "description": "Player 1 has placed all ships"
+    },
+    "player2_ready": {
+      "type": "boolean",
+      "description": "Player 2 has placed all ships"
+    },
+    "current_turn": {
+      "type": "string",
+      "description": "Email of player whose turn it is"
+    },
+    "winner": {
+      "type": "string",
+      "description": "Email of the winner"
+    }
+  },
+  "required": [
+    "code",
+    "status",
+    "player1_email"
+  ]
+}
